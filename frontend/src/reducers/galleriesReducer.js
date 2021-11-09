@@ -1,6 +1,6 @@
-export const galleries = (state = [], action) => {
+export const galleriesReducer = (state = [], action) => {
     switch(action.type){
-        case 'FETCH_GALLERIES';
+        case 'FETCH_GALLERIES':
             return action.payload
         default:
             return state
