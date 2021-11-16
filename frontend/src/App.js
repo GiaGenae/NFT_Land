@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Menu from './Components/Menu';
 import GalleriesList from './Components/GalleriesList';
+// import ArtsList from './Components/ArtsList';
 import { Route,Routes } from 'react-router-dom';
 import Home from './Components/Home';
 
