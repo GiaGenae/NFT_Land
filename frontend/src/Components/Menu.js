@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const menuItems = [
     { path: "/", name: "Home"},
+    { path: "galleries", name: "All Galleries"},
 ]
 
 const Menu = () => {

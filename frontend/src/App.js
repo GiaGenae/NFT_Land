@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route,Routes } from 'react-router-dom';
 import Menu from './Components/Menu';
+import GalleriesList from './Components/GalleriesList';
+import { Route,Routes } from 'react-router-dom';
 import Home from './Components/Home';
 
 class App extends Component {
@@ -11,6 +12,7 @@ class App extends Component {
         <Menu/>
         <Routes>
           <Route path='/' element={<Home/>} />
+          <Route path='galleries' element={<GalleriesList />} />
         </Routes>
       </div>
     )
