@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { BrowserRouter } from "react-router-dom";
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
@@ -10,7 +11,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import galleriesReducer from './Reducers/galleriesReducer.js';
 import artsReducer from './Reducers/artsReducer.js';
 import { combineReducers } from 'redux';
-import { BrowserRouter } from "react-router-dom";
 
 const allReducers = combineReducers({
   galleriesReducer,
@@ -21,7 +21,9 @@ const store = createStore(allReducers, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
+    <BrowserRouter>
     <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );
