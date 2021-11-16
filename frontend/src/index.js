@@ -3,6 +3,16 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Provider } from 'react-redux';
+import thunk from 'redux-thunk';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+
+const allReducers = combineReducers({
+  galleryReducer,
+  artsReducer,
+})
+
+const store = createStore(allReducers, applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>
