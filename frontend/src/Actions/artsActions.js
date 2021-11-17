@@ -9,7 +9,7 @@ import {
     return (dispatch) => {
         dispatch({ type: IS_LOADING_ARTS });
 
-        fetch(`http://localhost:3001/galleries/${galleryId}`)
+        fetch(`http://127.0.0.1:3001/galleries/${galleryId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response has an issue')
@@ -32,7 +32,7 @@ const getAllArts = () => {
     return (dispatch) => {
         dispatch({ type: IS_LOADING_ARTS });
 
-        fetch(`http://localhost:3001/arts`)
+        fetch(`http://127.0.0.1:3001/arts`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response has an issue')

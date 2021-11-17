@@ -51,6 +51,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
+        // deleteArtWithDispatch: (artid) => dispatch(deleteArts(id)),
         getArts: (galleryId) => dispatch(getArtsByGalleryId(galleryId))
     }
 };

@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import { connect } from 'react-redux';
-import { getAllArts, deleteArt } from '../Actions/artsActions';
+import {getAllArts, deleteArt} from '../Actions/artsActions';
 import Art from './Art';
 
 const ShowAllArts = ({ getArts, arts }) => {
