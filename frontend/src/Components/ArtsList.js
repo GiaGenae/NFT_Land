@@ -16,7 +16,7 @@ const ArtsList = ({ getArts, arts}) => {
            if (d === true) {
                deleteArt(id)
        }
-       window.location.reload(`http://localhost:4000/gallery/${params.galleryId}`)
+       window.location.reload(`http://localhost:3000/gallery/${params.galleryId}`)
    };
 
     useEffect(() => {

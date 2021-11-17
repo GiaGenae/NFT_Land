@@ -9,7 +9,7 @@ import {
     return (dispatch) => {
         dispatch({ type: IS_LOADING_ARTS });
 
-        fetch(`http://localhost:4000/galleries/${galleryId}`)
+        fetch(`http://localhost:3001/galleries/${galleryId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response has an issue')
@@ -32,7 +32,7 @@ const getAllArts = () => {
     return (dispatch) => {
         dispatch({ type: IS_LOADING_ARTS });
 
-        fetch(`http://localhost:4000/arts`)
+        fetch(`http://localhost:3001/arts`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response has an issue')
@@ -60,7 +60,7 @@ const deleteArt = (artid) => {
             Accept: "application/json"
         }}
 
-   fetch(`http://localhost:4000/arts/${artid}`, configObj)
+   fetch(`http://localhost:3001/arts/${artid}`, configObj)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response has an issue')
@@ -84,7 +84,7 @@ export const addArt = (userInput) => {
       body: JSON.stringify(_data)
   }
   
-  fetch(`http://localhost:4000/arts`, configObj)
+  fetch(`http://localhost:3001/arts`, configObj)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response has an issue')

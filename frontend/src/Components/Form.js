@@ -45,7 +45,7 @@ export default class ArtNew extends React.Component {
     onFormSubmit(e) {
         e.preventDefault();
         addArt(this.state)
-        window.location.replace(`http://localhost:4000/add-art`)
+        window.location.replace(`http://localhost:3000/add-art`)
     }
 
     render() {

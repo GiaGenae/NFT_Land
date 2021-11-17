@@ -7,7 +7,7 @@ import {
 export const fetchGalleries = () => {
     return (dispatch) => {
         dispatch({ type: IS_LOADING });
-        fetch(`http:localhost:4000/galleries`)
+        fetch(`http:localhost:3001/galleries`)
         .then(response => {
             if (!response.ok) {
                 throw new Error('There is an issue with the network response.')
