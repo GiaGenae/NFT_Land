@@ -7,17 +7,16 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import galleriesReducer from './Reducers/galleriesReducer.js';
+import galleryReducer from './Reducers/galleryReducer.js';
 import artsReducer from './Reducers/artsReducer.js';
 import { combineReducers } from 'redux'
 import { BrowserRouter } from 'react-router-dom';
 
 const allReducers = combineReducers({
-  galleriesReducer,
+  galleryReducer,
   artsReducer,
 })
 const store = createStore(allReducers, applyMiddleware(thunk)) 
-
 ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>

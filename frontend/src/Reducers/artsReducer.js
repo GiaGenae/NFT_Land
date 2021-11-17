@@ -6,14 +6,13 @@ import {
 } from '../Actions/actionTypes';
 
 const initialState = {
-    isLoading: false, 
+    isLoading: false,
     arts: [],
     error: null
 }
-
 const artsReducer = (state = initialState, action) => {
     switch(action.type) {
-        case IS_LOADING_ARTS:
+        case IS_LOADING_ARTS: 
             return {
                 ...state,
                 isLoading: true
@@ -21,22 +20,22 @@ const artsReducer = (state = initialState, action) => {
         case GET_ARTS_SUCCESS:
             return {
                 ...state,
-                isLoading: false, 
+                isLoading: false,
                 arts: action.payload.data
             }
-        case GET_ARTS_FAILED: 
+        case GET_ARTS_FAILED:
             return {
                 ...state,
-                isLoading: false, 
+                isLoading: false,
                 error: action.payload.error
             }
         case DELETE_ART:
             return {
                 ...state,
-                isLoading: false, 
-                arts: action.payload.data
+                isLoading: false,
+               arts: action.payload.data
             }
-        default: 
+        default:
             return state;
     }
 }
