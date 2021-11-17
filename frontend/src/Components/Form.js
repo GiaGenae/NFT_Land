@@ -51,26 +51,38 @@ export default class ArtNew extends React.Component {
     render() {
         return (
           <form onSubmit={this.onFormSubmit}>
-            <div className="mb-3">
-              <label className="form-label">Name</label>
+            <div class="text-center text-success">
+            <h2>Add Art Below:</h2>
+            </div>
+            <br></br>
+            <br></br>
+            <div className="mb-1 text-center">
+              <label className="form-label">Name:</label>
               <input type="text" className="form-control" name="name" aria-describedby="name" onChange={this.handleNameChange}/>
             </div>
-            <div className="mb-3">
-              <label className="form-label">Price</label>
+            <br></br>
+            <div className="mb-3 text-center">
+              <label className="form-label">Price (ethereum):</label>
               <input type="number" step="0.01" className="form-control" name="price" onChange={this.handlePriceChange}/>
             </div>
-            <div className="mb-3">
-              <label className="form-label">Description</label><br/><br/>
+            <br></br>
+            <div className="mb-3 text-center">
+              <label className="form-label">Description:</label>
               <textarea name="description" className="form-control" onChange={this.handleDescriptionChange}></textarea>
-              
             </div>
-            <div className="mb-3">
+            <br></br>
+            <div className="mb-3 text-center">
               <label  className="form-label">Select Gallery</label>
               <select className="form-select" aria-label="Default select example" name="gallery" onChange={this.handleGalleryChange}>
               <GalleriesDropdown/>
               </select>
             </div>
-            <button type="submit" className="btn btn-success">Save</button>
+            <br></br>
+            <br></br>
+            <br></br>
+            <div class="col text-center">
+              <button type="submit" className="btn btn-success">Save</button>
+            </div>
           </form>
         );
     }

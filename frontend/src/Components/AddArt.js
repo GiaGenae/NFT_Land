@@ -24,9 +24,9 @@ class AddArt extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-      isLoading: state.galleryReducer.loading,
-      galleries: state.galleryReducer.galleries,
-      error: state.galleryReducer.error
+      isLoading: state.galleriesReducer.loading,
+      galleries: state.galleriesReducer.galleries,
+      error: state.galleriesReducer.error
     }
   }
 

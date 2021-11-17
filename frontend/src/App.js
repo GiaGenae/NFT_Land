@@ -12,8 +12,11 @@ class App extends Component {
   render() {
     return (
       <div className ="container">
+        <br></br>
         <Menu/>
-
+          <br></br>
+          <br></br>
+          <br></br>
         <Routes>
           <Route path='/' element={<Home/>} />
           <Route path='galleries' element={<GalleriesList />} />
