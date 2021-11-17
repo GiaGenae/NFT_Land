@@ -73,5 +73,5 @@ export default class ArtNew extends React.Component {
             <button type="submit" className="btn btn-success">Save</button>
           </form>
         );
-      }
+    }
 }
